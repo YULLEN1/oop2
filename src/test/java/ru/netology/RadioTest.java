@@ -17,7 +17,7 @@ public class RadioTest {
     }
 
     @Test
-    public void increaseVolumeMax() {   //прибавить громкость больше Max
+    public void increaseVolumeMax() {   //прибавить громкость на Max
         radio.setCurrentVolume(100);
         radio.volumeUp();
 
@@ -50,7 +50,7 @@ public class RadioTest {
     }
 
     @Test
-    public void decreaseVolumeMin() {      //убавить громкость меньше Min
+    public void decreaseVolumeMin() {      //убавить громкость до Min
         radio.setCurrentVolume(0);
         radio.volumeDown();
 
@@ -72,7 +72,7 @@ public class RadioTest {
     }
 
     @Test
-    public void setStation() {      //выбор станции
+    public void setStationMax() {      //выбор станции Max
         radio.setCurrentRadioStation(9);
 
         int expected = 9;
@@ -97,6 +97,7 @@ public class RadioTest {
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
+
 
     @Test
     public void nextStation() {     //следующая станция

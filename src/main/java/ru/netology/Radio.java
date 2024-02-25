@@ -36,12 +36,16 @@ public class Radio {
     public void volumeUp() {                // увеличение громкости на 1
         if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
+        } else {
+            currentVolume = 100;
         }
     }
 
     public void volumeDown() {              // уменьшение громкости на 1
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
+        } else {
+            currentVolume = 0;
         }
     }
 
