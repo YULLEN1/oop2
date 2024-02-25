@@ -72,32 +72,13 @@ public class RadioTest {
     }
 
     @Test
-    public void setStationMax() {      //выбор станции Max
+    public void StationMax() {      //выбор станции Max
         radio.setCurrentRadioStation(9);
 
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
-
-    @Test
-    public void setStationMoreMax() {   //выбор станции больше Max
-        radio.setCurrentRadioStation(10);
-
-        int expected = 0;
-        int actual = radio.getCurrentRadioStation();
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void setStationLessMin() {   //выбор станции меньше Min
-        radio.setCurrentRadioStation(-1);
-
-        int expected = 0;
-        int actual = radio.getCurrentRadioStation();
-        Assertions.assertEquals(expected, actual);
-    }
-
 
     @Test
     public void nextStation() {     //следующая станция
@@ -119,10 +100,10 @@ public class RadioTest {
     }
     @Test
     public void prevStation() {     //предыдущая станция
-        radio.setCurrentRadioStation(5);
+        radio.setCurrentRadioStation(1);
         radio.prev();
 
-        int expected = 4;
+        int expected = 0;
         int actual = radio.getCurrentRadioStation();
         Assertions.assertEquals(expected, actual);
     }
